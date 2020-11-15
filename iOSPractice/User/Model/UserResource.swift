@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct UserResource: APIResource {
+    typealias ModelType = User
+    let path = "https://jsonplaceholder.typicode.com/users"
+    //    let queries: [URLQuery]? = [URLQuery(name: "sort", value: "ascending")]
+}

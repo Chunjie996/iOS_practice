@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2505ABE52561AB9700E81E8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505ABE42561AB9700E81E8B /* User.swift */; };
+		2505ABEF2561AD1200E81E8B /* APIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505ABEE2561AD1200E81E8B /* APIResource.swift */; };
+		2505ABF72561AF4800E81E8B /* UserResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505ABF62561AF4800E81E8B /* UserResource.swift */; };
+		2505ABFC2561B0DF00E81E8B /* GetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2505ABFB2561B0DF00E81E8B /* GetService.swift */; };
 		366EAA4062EE261EC2BABA46 /* Pods_iOSPractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D81C9F719906E8EF0686CDDE /* Pods_iOSPractice.framework */; };
 		435F02F683234E5ECA6DAC16 /* Pods_iOSPracticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59EBA1DA114A3F436E523D47 /* Pods_iOSPracticeTests.framework */; };
 		B5C67DFD254742AA0062FA86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C67DFC254742AA0062FA86 /* AppDelegate.swift */; };
@@ -41,6 +44,9 @@
 /* Begin PBXFileReference section */
 		20309EAE86078393ACB10590 /* Pods-iOSPractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPractice.debug.xcconfig"; path = "Target Support Files/Pods-iOSPractice/Pods-iOSPractice.debug.xcconfig"; sourceTree = "<group>"; };
 		2505ABE42561AB9700E81E8B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		2505ABEE2561AD1200E81E8B /* APIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResource.swift; sourceTree = "<group>"; };
+		2505ABF62561AF4800E81E8B /* UserResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResource.swift; sourceTree = "<group>"; };
+		2505ABFB2561B0DF00E81E8B /* GetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetService.swift; sourceTree = "<group>"; };
 		448325F65ABFD7C7D4DD0D66 /* Pods-iOSPractice-iOSPracticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSPractice-iOSPracticeUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOSPractice-iOSPracticeUITests/Pods-iOSPractice-iOSPracticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B4EDD11685A28F3BD7B609E /* Pods_iOSPractice_iOSPracticeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPractice_iOSPracticeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59EBA1DA114A3F436E523D47 /* Pods_iOSPracticeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSPracticeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,8 +153,26 @@
 			isa = PBXGroup;
 			children = (
 				2505ABE42561AB9700E81E8B /* User.swift */,
+				2505ABF62561AF4800E81E8B /* UserResource.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		2505ABEC2561ACE600E81E8B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2505ABED2561ACEF00E81E8B /* Networking */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2505ABED2561ACEF00E81E8B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2505ABEE2561AD1200E81E8B /* APIResource.swift */,
+				2505ABFB2561B0DF00E81E8B /* GetService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		B5C67DF0254742AA0062FA86 = {
@@ -176,6 +200,7 @@
 		B5C67DFB254742AA0062FA86 /* iOSPractice */ = {
 			isa = PBXGroup;
 			children = (
+				2505ABEC2561ACE600E81E8B /* Services */,
 				2505ABE22561AB7E00E81E8B /* User */,
 				2505ABD42561A61A00E81E8B /* Main */,
 				2505ABD32561A60F00E81E8B /* App */,
@@ -450,6 +475,9 @@
 				2505ABE52561AB9700E81E8B /* User.swift in Sources */,
 				B5C67E01254742AA0062FA86 /* MainViewController.swift in Sources */,
 				B5C67DFD254742AA0062FA86 /* AppDelegate.swift in Sources */,
+				2505ABFC2561B0DF00E81E8B /* GetService.swift in Sources */,
+				2505ABEF2561AD1200E81E8B /* APIResource.swift in Sources */,
+				2505ABF72561AF4800E81E8B /* UserResource.swift in Sources */,
 				B5C67DFF254742AA0062FA86 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
