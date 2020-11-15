@@ -25,12 +25,10 @@ extension APIResource {
     var queries: [URLQuery]? { get { return nil } } // Set default value of queries to nil
     var url: URL {
         var components = URLComponents(string: path)!
-        
         // Append URL query strings to components if queries parameter has been set
         if let queryItems = queries {
-            components.queryItems = queryItems.map{ URLQueryItem(name: $0.name, value: $0.value) }
+            components.queryItems = queryItems.map { URLQueryItem(name: $0.name, value: $0.value) }
         }
-        
         // Returns full path URL of an API endpoint
         return components.url!
     }
