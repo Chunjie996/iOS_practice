@@ -1,19 +1,12 @@
-//
-//  ViewController.swift
-//  iOSPractice
-//
-//  Created by Chunjie Yang on 10/26/20.
-//
+// Copyright \(c\) 201[6-9]
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
 }
-
