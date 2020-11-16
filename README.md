@@ -4,7 +4,7 @@ Open iOSPractice.xcworkspace instead of iOSPractice.xcodeproj
 ## Networking Diagram
 Work in progress
 
-![GetService] (/Documentation/GetService.png)
+![GetService](/Documentation/GetService.png)
 
 ## SwiftLint
 We use [SwiftLint](https://github.com/realm/SwiftLint) to enforce Swift style and conventions.
