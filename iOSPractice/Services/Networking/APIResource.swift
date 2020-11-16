@@ -17,8 +17,8 @@ struct URLQuery {
 // Defines APIResource protocol which should be constructed when calling an API endpoint
 protocol APIResource {
     associatedtype ModelType: Codable
-    var path: String { get }
-    var queries: [URLQuery]? { get }
+    var path: String { get } // TODO: Allow for a dynamic path based on a variable, etc.
+    var queries: [URLQuery]? { get } // TODO: Allow for a dynamic queries based on a variable, etc.
 }
 
 extension APIResource {
