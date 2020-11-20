@@ -17,14 +17,21 @@ struct URLQuery {
 // Defines APIResource protocol which should be constructed when calling an API endpoint
 protocol APIResource {
     associatedtype ModelType: Codable
-    var path: String { get } // TODO: Allow for a dynamic path based on a variable, etc.
-    var queries: [URLQuery]? { get } // TODO: Allow for a dynamic queries based on a variable, etc.
+    var basePath: String { get }
+    var identifier: String? { get }
+    var queries: [URLQuery]? { get }
+    var payload: ModelType? { get }
 }
 
+// Define URL
 extension APIResource {
-    var queries: [URLQuery]? { get { return nil } } // Set default value of queries to nil
     var url: URL {
-        var components = URLComponents(string: path)!
+        var fullPath = basePath
+        // Append dynamic identifier to the base path (e.g. {basePath}/USER1234)
+        if let identifier = identifier {
+            fullPath += identifier
+        }
+        var components = URLComponents(string: fullPath)!
         // Append URL query strings to components if queries parameter has been set
         if let queryItems = queries {
             components.queryItems = queryItems.map { URLQueryItem(name: $0.name, value: $0.value) }
@@ -32,4 +39,11 @@ extension APIResource {
         // Returns full path URL of an API endpoint
         return components.url!
     }
+}
+
+// Define optional properties
+extension APIResource {
+    var queries: [URLQuery]? { return nil }
+    var identifier: String? { return nil }
+    var payload: ModelType? { return nil }
 }
